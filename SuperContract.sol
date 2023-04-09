@@ -7,14 +7,14 @@ contract SuperContract{
     Person public Employeer = Person({dni: 36592920, name: "Alberto", lastname: "Ayza"});    
     Person[] public persons;
 
-    mapping(string => uint256) public lastnameToDNI; // definición
+    mapping(string => uint256) public lastnameToDNI; // definición -> lastnameToDNI es el nombre del mapping
 
-    function store(uint256 _nro) public {
+    function registerNumber(uint256 _nro) public {
         numero = _nro;
     }
 
     // view es un identificador para llamadas a la blockchain
-    function retrieve() public view returns(uint256){
+    function getNumber() public view returns(uint256){
         return numero;
     }
 
